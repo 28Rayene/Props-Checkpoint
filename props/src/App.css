@@ -1,0 +1,12 @@
+.cc{
+  display: grid;
+  grid-template-columns: 400px 400px 400px 400px;
+  justify-content: center;
+  background: #212534;
+  
+  
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  box-sizing: border-box;
+  
+}

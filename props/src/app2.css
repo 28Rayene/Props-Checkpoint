@@ -1,0 +1,90 @@
+:root{
+    --card-height: 65vh;
+    --card-width: calc(var(--card-height)/ 1.5);
+  
+  }
+.player-card {
+    
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    background-color: #111927;
+    background-image: 
+        radial-gradient(at 47% 33%, hsl(352.72, 98%, 41%) 0, transparent 59%), 
+        radial-gradient(at 82% 65%, hsl(218.00, 39%, 11%) 0, transparent 55%)
+  }
+  
+  .card-header {
+    text-align: center;
+    padding: 20px;
+    
+    color: #fff;
+  }
+  
+  .card-header img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 4px solid #fff;
+  }
+  
+  .card-header h2 {
+    margin: 10px 0 5px;
+  }
+  
+  .card-header p {
+    margin: 5px 0;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .card-body p {
+    margin: 10px 0;
+    color: #fff;
+  }
+  .card-header:hover{
+    color: rgb(88 199 250 / 100%);
+    transition: color 1s;
+  }
+  
+  .card-header:hover::before, .card-header:hover::after{
+    animation: none;
+    opacity: 0;
+  
+  }
+  .card-header::before{
+    content: "";
+    width: 104%;
+    height: 102%;
+    border-radius: 8px;
+    background-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43% , #4e00c2);
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
+  }
+  .card-header::after{
+    position: absolute;
+    content: "";
+    top: calc(var(--card-height)/6);
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(var(--card-height)/6));
+    background-image: linear-gradient(var(--rotate), #1efff4 , #0743f8 43%, #6600ff);
+    opacity: 1;
+    transition: opacity 0.5s;
+    animation: spin 2.5s linear infinite;
+  }
+  
+  
